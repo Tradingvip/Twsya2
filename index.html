@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفقة تداول IRIS/USDT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0088cc; /* لون مشابه لتلجرام */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            color: white;
+        }
+        .trade-container {
+            background-color: #ffffff20; /* لون شفاف جميل للعنصر */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-bottom: 20px;
+            width: 90%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .trade-details {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .trade-target {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .stop-lose {
+            color: #ff3333;
+            font-size: 16px;
+        }
+        .tradingview-widget-container {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+        }
+        footer {
+            margin-top: auto;
+            padding: 10px 0;
+            background-color: transparent;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+        footer span {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 5px 15px;
+            border-radius: 10px;
+        }
+
+        /* Media queries for mobile responsiveness */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+            .trade-details, .trade-target, .stop-lose {
+                font-size: 14px;
+            }
+            .trade-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="trade-container">
+        <h1>صفقة تداول IRIS/USDT</h1>
+        <div class="trade-details">
+            Buy Between: <br>
+            [ 0.01463 - 0.01474 ]
+        </div>
+        <div class="trade-target">Target 1 ➡️ 0.01500</div>
+        <div class="trade-target">Target 2 ➡️ 0.01544</div>
+        <div class="trade-target">Target 3 ➡️ 0.01546</div>
+        <div class="stop-lose">Stop Lose ➡️ 0.01426</div>
+    </div>
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div id="tradingview_00abc"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.widget(
+        {
+            "width": "100%",
+            "height": "400",
+            "symbol": "BINANCE:IRISUSDT",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "light",
+            "style": "1",
+            "locale": "ar",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "allow_symbol_change": true,
+            "container_id": "tradingview_00abc"
+        });
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+    <!-- Footer with copyright -->
+    <footer>
+        <span>حقوق الطبع © 2024 IR Trading Spot</span>
+    </footer>
+
+</body>
+</html>
